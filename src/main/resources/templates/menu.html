@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<meta charset="utf-8">
+    <title>Admin Payment</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- CSS-->
+    <link rel="stylesheet" type="text/css" href="static/css/menu.css" th:href="@{/css/menu	.css}">
+
+</head>
+    <body>
+    	<div class="div_inline"/></div>
+        <div class="div_inline"/></div>
+    	
+        <div class="div_inline">
+	        <form th:action="@{/logout}" method="post">
+	            <input type="submit"  class="btn btn-primary" value="Cerrar Sesion"/>
+	        </form>
+        </div>
+    	<div class="modal-dialog text-center">
+        	<h1 th:inline="text">Bienvenido [[${#httpServletRequest.remoteUser}]]!</h1>
+        </div>
+        
+        <h1><a th:href="@{/product}"> Productos</a> | <a th:href="@{/client}"> Clientes</a>| <a th:href="@{/pago}"> Pagos</a></h1>
+    </body>
+</html>
